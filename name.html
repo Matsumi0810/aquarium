@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="〇〇水族館で生まれた赤ちゃんカワウソのお名前を募集します！！">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="icon alternate" href="./images/favicon.png" type="image/png">
+
+    <title>赤ちゃんカワウソの名前募集</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/name.css">
+</head>
+
+<body>
+    <!-- トップページに戻る -->
+    <nav class="otter-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><img src="./images/mv/logo.png"
+                        srcset="images/mv/logo.png 1x,images/mv/logo@2x.png 2x" alt="ロゴの画像" /></a>
+            </div>
+
+            <div class="nav-links">
+                <div class="headerNav">
+                    <ul>
+                        <a href="./calender.html">
+                            <li>イベントカレンダー</li>
+                        </a>
+                        <a href="#">
+                            <li>フロアガイド</li>
+                        </a>
+                        <a href="./contact.html">
+                            <li>お問い合わせ</li>
+                        </a>
+                    </ul>
+                </div>
+                <a href="index.html" class="btn-back-home">
+                    トップページへ戻る
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 中身 -->
+    <header>
+
+        <h1>赤ちゃんカワウソの名前を募集中！</h1>
+        <p>あなたの一票が、この子の名前に。素敵なアイデアをお待ちしています！</p>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>この子のプロフィール</h2>
+            <div class="gallery">
+                <img src="./images/kawauso/kawauso1.png" alt="カワウソ1" class="active">
+                <img src="./images/kawauso/kawauso2.jpeg" alt="カワウソ2">
+                <img src="./images/kawauso/kawauso3.webp" alt="カワウソ3">
+            </div>
+            <p>2025年12月生まれの女の子。元気に泳ぎの練習中です！</p>
+            <p>2026年3月ごろから展示開始予定</p>
+        </section>
+
+        <form id="namingForm">
+            <div>
+                <label for="nickname">あなたのニックネーム:</label><br>
+                <input type="text" id="nickname" name="nickname" required>
+            </div>
+
+            <div>
+                <label for="otterName">カワウソの名前案:</label><br>
+                <input type="text" id="otterName" name="otterName" required>
+            </div>
+
+            <div>
+                <label for="reason">名付けた理由:</label><br>
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+            </div>
+
+            <div class="terms-container">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">応募規約に同意する</label>
+            </div>
+            <button type="submit">この名前で応募する！</button>
+        </form>
+
+
+        <div id="thanksMessage" style="display: none; text-align: center; padding: 40px;">
+            <h2 style="color: #c88a8a;">🐾 応募完了 🐾</h2>
+            <p>素敵な名前をありがとうございます！<br>赤ちゃんカワウソも喜んでいます♪</p>
+        </div>
+    </main>
+
+    <div class="center">
+        <a href="index.html" class="btn-back-home">
+            トップページへ戻る
+        </a>
+    </div>
+
+    <script src="./js/name.js"></script>
+
+
+</body>
+
+</html>

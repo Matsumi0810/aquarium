@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="あなたもやってみよう！４つの質問で１６種類のタイプ診断。">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="icon alternate" href="./images/favicon.png" type="image/png">
+    <title>水性生物診断</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/shindan.css">
+</head>
+
+<body>
+    <!-- トップページに戻る -->
+    <nav class="otter-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><a href="./index.html"><img src="./images/mv/logo.png"
+                            srcset="images/mv/logo.png 1x,images/mv/logo@2x.png 2x" alt="ロゴの画像" /></a>
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <div class="headerNav">
+                    <ul>
+                        <a href="#">
+                            <li>フード情報</li>
+                        </a>
+                        <a href="#">
+                            <li>フロアガイド</li>
+                        </a>
+                        <a href="./contact.html">
+                            <li>お問い合わせ</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <a href="index.html" class="btn-back-home">
+                    トップページへ戻る
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="mvImg"></div>
+    <div class="card">
+        <h2>タイプ診断</h2>
+        <p>あなたは水辺に住んでいる生きものです。</p>
+        <form id="shindan-form">
+            <div class="question">
+                <p>Q1. あなたはどっち派？</p>
+                <div class="options"><label class="optionBtnA"><input type="radio" name="A" value="1" required>
+                        群れで行動したい！</label></div>
+                <div class="options"><label class="optionBtnB"><input type="radio" name="A" value="2">
+                        やっぱり一人が落ち着くよね</label></div>
+            </div>
+
+            <div class="question">
+                <p>Q2. 新しい仲間ができた！　気になるのは…</p>
+                <div class="options"><label class="optionBtnA"><input type="radio" name="B" value="10" required>
+                        体格・強さ・泳ぎ方</label></div>
+                <div class="options"><label class="optionBtnB"><input type="radio" name="B" value="20">
+                        優しい子かな？　仲良くできるかな？</label></div>
+            </div>
+
+            <div class="question">
+                <p>Q3. よさそうな住みかを発見した。どうやらライバルがいるようだ…</p>
+                <div class="options"><label class="optionBtnA"><input type="radio" name="C" value="100" required>
+                        先に見つけた方が住むべき</label></div>
+                <div class="options"><label class="optionBtnB"><input type="radio" name="C" value="200">
+                        あっ、どうぞどうぞ…</label></div>
+            </div>
+
+            <div class="question">
+                <p>Q4. 今日のお散歩は…</p>
+                <div class="options"><label class="optionBtnA"><input type="radio" name="D" value="1000" required>
+                        いつものルートで！</label></div>
+                <div class="options"><label class="optionBtnB"><input type="radio" name="D" value="2000">
+                        とりあえず面白そうな方へ！</label></div>
+            </div>
+
+            <button type="button" class="btn" onclick="checkResult()">結果を見る</button>
+        </form>
+
+        <div id="result-area">
+            <h3>診断結果:</h3>
+            <p id="result-text"></p>
+        </div>
+    </div>
+
+
+    <script src="./js/shindan.js"></script>
+</body>
+
+</html>
