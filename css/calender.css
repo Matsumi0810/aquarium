@@ -1,0 +1,239 @@
+/* --- 全体の基本設定 --- */
+body {
+    font-family: "Helvetica Neue", "Arial", "Hiragino Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fbfc;
+    color: #333;
+}
+
+/* --- ナビゲーション --- */
+
+.headerNava,
+.headerNav a:link,
+.headerNav a:visited {
+    color: #f9fcff;
+    text-decoration: none;
+}
+
+.headerNav li:hover {
+    color: #ff9800;
+}
+
+.otter-nav {
+    width: 100%;
+    background-color: #4b5b71;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    max-width: 30%;
+}
+
+.btn-back-home {
+    text-decoration: none;
+    color: white;
+    background-color: #7489b1;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 3px 0 #818e9b;
+}
+
+.btn-back-home:hover {
+    background-color: #516475;
+    transform: translateY(-2px);
+}
+
+.headerNav ul {
+    display: flex;
+    font-size: 0.85rem;
+    list-style: none;
+}
+
+.headerNav ul li {
+    padding: 10px;
+    margin-right: 8px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+
+/* --- カレンダー本体 --- */
+.calendar-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.calendar-header h2 {
+    color: #003366;
+    margin: 0;
+}
+
+/* 切り替えボタン */
+.calendar-header button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.calendar-header button:hover {
+    background-color: #0055aa;
+}
+
+/* テーブルデザイン */
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.calendar-table th,
+.calendar-table td {
+    border: 1px solid #eef2f6;
+    padding: 10px;
+    text-align: left;
+    height: 110px;
+    /* 少し高くしました */
+    vertical-align: top;
+}
+
+.calendar-table th {
+    background: #f0f4f8;
+    height: auto;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.closeDay {
+    background-color: rgba(241, 241, 241, 0.4);
+}
+
+/* 曜日の色 */
+.sun {
+    color: #e57373;
+}
+
+.sat {
+    color: #64b5f6;
+}
+
+/* 空白マス */
+.gray {
+    background-color: #fbfcfd;
+    color: #ccc;
+}
+
+/* --- 今日の日付ハイライト（修正の要） --- */
+.calendar-table td.today {
+    background-color: #fff9c4 !important;
+    /* 明るいレモンイエロー */
+    border: 2px solid #ff9800 !important;
+    /* オレンジの太枠 */
+    position: relative;
+    z-index: 1;
+}
+
+/* 「TODAY」ラベル */
+.calendar-table td.today::before {
+    content: "TODAY";
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 0.6rem;
+    background: #ff9800;
+    color: white;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* --- イベントラベル --- */
+.event-dot {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-top: 5px;
+    color: white;
+    font-weight: normal;
+    line-height: 1.2;
+    display: block;
+    /* 縦に並ぶように保証 */
+}
+
+.pink {
+    background-color: #e7adad;
+}
+
+/* カワウソ・ペンギン */
+.blue {
+    background-color: #0077b6;
+}
+
+/* 教室・掃除 */
+.orange {
+    background-color: #ff9800;
+}
+
+.hai {
+    background-color: #e4e4e4;
+}
+
+/* イルカ・お正月 */
+
+/* --- 凡例 --- */
+.calendar-legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    font-size: 0.85rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+}

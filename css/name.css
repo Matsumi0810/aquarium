@@ -1,0 +1,237 @@
+/* 全体の背景：優しいベージュ */
+body {
+    background-color: #f5ebe0;
+    color: #6d4c41;
+    /* 濃いめのココアブラウン */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ヘッダー：くすみピンクのグラデーション */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #d4a373;
+    background: linear-gradient(135deg, #e7adad 0%, #c88a8a 100%);
+    color: white;
+    border-radius: 30px;
+    margin: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 28px;
+}
+
+/* トップページに戻る */
+.otter-nav {
+    width: 100%;
+    background-color: #9b7878;
+    padding: 1px 0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.nav-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a,
+a:link,
+a:visited {
+    color: #fff8f5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+/* サイト名の装飾 */
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    max-width: 30%;
+}
+
+/* トップに戻るボタンの装飾 */
+.btn-back-home {
+    text-decoration: none;
+    background-color: #e7adad;
+    border-radius: 30px;
+    padding: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 3px 0 #c88a8a;
+}
+
+/* ボタンホバー設定 */
+.btn-back-home:hover {
+    background-color: #f2c2c2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 #c88a8a;
+}
+
+.btn-back-home:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.headerNav ul {
+    display: flex;
+    font-size: 0.85rem;
+    list-style: none;
+
+}
+
+.headerNav ul li {
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/* ギャラリー(カワウソの写真をローテで表示する)全体の枠 */
+.gallery {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* 画像の高さに合わせて調整 */
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #fdf5f5;
+    /* 画像読み込み前の背景色 */
+}
+
+/* 画像すべての共通設定 */
+.gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    /* 最初は全部透明 */
+    transition: opacity 1.5s ease-in-out;
+    /* ふわっとさせる時間 */
+}
+
+/* activeクラスがついた画像だけ表示する */
+.gallery img.active {
+    opacity: 1;
+}
+
+/* メインコンテンツ */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* プロフィール紹介エリア */
+#intro {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px dashed #e7adad;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#intro h2 {
+    color: #a67c52;
+    margin-top: 0;
+}
+
+/* フォーム本体 */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(109, 76, 65, 0.1);
+    margin-bottom: 36px;
+}
+
+form div {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #8d6e63;
+    font-size: 0.85rem;
+    margin-bottom: -20px;
+    margin-left: 8px;
+}
+
+/* 入力欄：枠線を薄いピンクに */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #f2e1e1;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: #fffafb;
+    color: #6d4c41;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e7adad;
+    background-color: #fff;
+}
+
+/* 同意チェックボックス */
+.terms-container label {
+    display: inline;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #8d6e63;
+}
+
+.terms-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #c88a8a;
+}
+
+/* 応募ボタン：くすみピンクのぷっくりボタン */
+button {
+    width: 100%;
+    background-color: #c88a8a;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 36px;
+
+}

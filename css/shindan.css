@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+    margin: 0;
+    background-color: #699aa2;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #d4a373;
+    background: linear-gradient(135deg, #e7adad 0%, #c88a8a 100%);
+    color: white;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* トップページに戻る */
+.headerNav a,
+.headerNav a:link,
+.headerNav a:visited {
+    color: #536e7a;
+    text-decoration: none;
+}
+
+.headerNav li:hover {
+    color: #ffffff;
+}
+
+.otter-nav {
+    width: 100%;
+    background-color: #d5e0df;
+    padding: 8px 0;
+    margin-bottom: 20px;
+}
+
+.nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* サイト名の装飾 */
+.nav-logo img {
+    max-width: 30%;
+}
+
+/* トップに戻るボタンの装飾 */
+.btn-back-home {
+    text-decoration: none;
+    color: white;
+    background-color: #acd1dd;
+    border-radius: 30px;
+    padding: 8px;
+    margin-left: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 3px 0 #6d91a0;
+}
+
+/* ボタンホバー設定 */
+.btn-back-home:hover {
+    background-color: #6d91a0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 #acd1dd;
+}
+
+.btn-back-home:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.headerNav ul {
+    display: flex;
+    font-size: 0.85rem;
+    list-style: none;
+}
+
+.headerNav ul li {
+    padding: 5px;
+    margin-right: 8px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.mvImg {
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    height: 500px;
+    background: url(../images/shindan/seibutushindan1.png)no-repeat center center/cover;
+    border: 10px groove #668893;
+    margin: 0 auto 72px;
+}
+
+.card {
+    width: 70%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #536e7a;
+}
+
+.question {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.question p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+}
+
+label {
+    margin-right: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.optionBtnA input[type="radio"],
+.optionBtnB input[type="radio"] {
+    display: none !important;
+}
+
+.optionBtnA,
+.optionBtnB {
+    flex: 1;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.optionBtnA {
+    background-color: rgba(97, 181, 192, 0.3);
+}
+
+.optionBtnB {
+    background-color: rgba(126, 144, 174, 0.3);
+}
+
+.optionBtnA:hover {
+    background-color: rgba(97, 181, 192, 0.8);
+
+}
+
+.optionBtnB:hover {
+    background-color: rgba(126, 144, 174, 0.8);
+
+}
+
+.optionBtnA:has(input:checked) {
+    background-color: rgba(97, 181, 192, 0.8);
+    border: 5px groove #b9b9b9;
+
+}
+
+.optionBtnB:has(input:checked) {
+    background-color: rgba(126, 144, 174, 0.8);
+    border: 5px groove #b9b9b9;
+}
+
+.btn {
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #536e7a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn:hover {
+    opacity: 0.5;
+}
+
+#result-area {
+    margin-top: 30px;
+    padding: 20px;
+    background: #eef4f9;
+    border-left: 5px solid #2868a7;
+    border-radius: 5px;
+    display: none;
+}

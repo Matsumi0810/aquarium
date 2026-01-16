@@ -1,0 +1,202 @@
+/* ヘッダー全体の固定設定 */
+.top-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(44, 64, 112, 0.8);
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.headerNava,
+.headerNav a:link,
+.headerNav a:visited {
+    color: #f9fcff;
+    text-decoration: none;
+}
+
+.headerNav li:hover {
+    color: #ff9800;
+}
+
+.nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    /* 左右に振り分ける */
+    align-items: center;
+}
+
+/* ロゴ部分 */
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    max-width: 30%;
+}
+
+
+/* トップに戻るボタン */
+.btn-back-home {
+    text-decoration: none;
+    color: #fff9f9;
+    /* 最初は控えめなグレー */
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.btn-back-home .icon {
+    font-size: 1.1rem;
+    margin-left: 8px;
+}
+
+.btn-back-home:hover {
+    color: #ff9800;
+}
+
+.recruit-container {
+    margin-top: 40px;
+}
+
+.headerNav ul {
+    display: flex;
+    font-size: 0.85rem;
+    list-style: none;
+
+}
+
+.headerNav ul li {
+    padding: 0 10px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/* トップページに戻るーここまで-------------------------- */
+
+/* 全体の基本設定 */
+body {
+    background-color: #ffffff;
+    color: #333333;
+    font-family: "Helvetica Neue", "Arial", "Hiragino Sans", sans-serif;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.recruit-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #ff9800;
+}
+
+/* 新卒・中途のカードレイアウト */
+.career-cards {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.card {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 40px;
+    border-top: 5px solid #003366;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-tag {
+    color: #003366;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+.btn-more {
+    display: inline-block;
+    background-color: #ff9800;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    /* 丸みは控えめに */
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-more:hover {
+    background-color: #e68a00;
+}
+
+/* 募集要項リスト */
+.job-list-section {
+    background-color: #f0f4f8;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.job-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #d1d9e0;
+}
+
+.btn-outline {
+    border: 1px solid #003366;
+    color: #003366;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+
+.btn-outline:hover {
+    background-color: #003366;
+    color: white;
+}
+
+/* レスポンシブ対応（スマホでは縦に並べる） */
+@media (max-width: 768px) {
+    .career-cards {
+        flex-direction: column;
+    }
+}
